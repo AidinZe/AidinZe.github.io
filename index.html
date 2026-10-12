@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aidin Zehtab — AI Tech Lead</title>
+<meta name="description" content="AI Tech Lead building production LLM, NLP and recommender systems in healthcare, fintech and consumer products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070d1c;--ink:#eaf0ff;--mut:#97a5c6;--lapis:#3b63f0;--tile:#27d3e6;--card:#0f1830;--line:#1d2a4a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 Figtree,system-ui,sans-serif;overflow-x:hidden}
+a{color:var(--tile);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--tile);outline-offset:3px;border-radius:6px}
+.w{max-width:1100px;margin:0 auto;padding:0 24px}
+/* top bar */
+header{position:fixed;inset:0 0 auto 0;z-index:10;backdrop-filter:blur(14px);background:rgba(7,13,28,.6);border-bottom:1px solid rgba(255,255,255,.05)}
+header .w{display:flex;justify-content:space-between;align-items:center;height:60px}
+header b{font:700 1.05rem Bricolage Grotesque,sans-serif}
+header nav{display:flex;gap:22px}
+header nav a{color:var(--mut);text-decoration:none;font-weight:500;font-size:.95rem}
+header nav a:hover{color:var(--ink)}
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden;padding:110px 0 70px}
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.45;will-change:transform;animation:drift 14s ease-in-out infinite alternate}
+.b1{width:560px;height:560px;background:var(--lapis);top:-8%;right:-6%}
+.b2{width:460px;height:460px;background:var(--tile);bottom:-10%;left:-6%;opacity:.3;animation-duration:18s;animation-delay:-6s}
+.b3{width:340px;height:340px;background:#7c4dff;top:38%;left:42%;opacity:.28;animation-duration:22s;animation-delay:-11s}
+@keyframes drift{0%{transform:translate(0,0) scale(1)}33%{transform:translate(-120px,90px) scale(1.15)}66%{transform:translate(80px,150px) scale(.92)}100%{transform:translate(-60px,-110px) scale(1.2)}}
+.hero .w{position:relative;width:100%}
+.box{width:550px;max-width:100%;margin:0 auto;text-align:left}
+h1{font:600 clamp(2.6rem,7vw,5rem)/1.12 Figtree,system-ui,sans-serif;letter-spacing:-.02em;margin:0 0 24px;color:var(--ink)}
+h1 span{display:block}
+.say{font-size:clamp(1.15rem,2.4vw,1.55rem);line-height:1.5;color:var(--mut);margin:0 0 34px}
+.l1{display:block;height:1.5em}
+.l2{display:flex;gap:.4em;height:1.5em;white-space:nowrap}
+.l2 i{font-style:normal;flex:none}
+.say b{flex:1;min-width:0;overflow:hidden;white-space:nowrap;color:var(--ink);font-weight:600}
+.say b::after{content:"";display:inline-block;width:2px;height:1.05em;margin-left:4px;vertical-align:-.15em;background:var(--tile);animation:caret .8s steps(1) infinite}
+@keyframes caret{50%{opacity:0}}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 24px;border-radius:12px;font-weight:600;text-decoration:none;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.pri{background:linear-gradient(100deg,var(--lapis),var(--tile));color:#04101f}
+.sec{border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.03)}
+.box>*{animation:up .9s both}
+.box>:nth-child(2){animation-delay:.14s}.box>:nth-child(3){animation-delay:.28s}
+@keyframes up{from{opacity:0;transform:translateY(28px)}}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:-40px;position:relative}
+.stats div{background:var(--card);padding:26px 22px}
+.stats strong{display:block;font:800 2.4rem/1 Bricolage Grotesque,sans-serif}
+.stats span{color:var(--mut);font-size:.95rem}
+section{padding:96px 0 0;scroll-margin-top:30px}
+h2{font:700 clamp(2rem,4.5vw,3rem)/1.1 Bricolage Grotesque,sans-serif;letter-spacing:-.025em;margin:0 0 14px}
+.sub{color:var(--mut);max-width:36em;margin:0 0 40px}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.card{--x:50%;--y:50%;position:relative;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(360px circle at var(--x) var(--y),rgba(59,99,240,.22),transparent 60%);opacity:0;transition:opacity .3s}
+.card:hover::before{opacity:1}
+.card>*{position:relative}
+.c-a{grid-column:span 4}.c-b{grid-column:span 2}.c-c{grid-column:span 3}.c-d{grid-column:span 3}
+.card h3{font:700 1.4rem/1.2 Bricolage Grotesque,sans-serif;margin:0 0 10px}
+.card p{margin:0;color:var(--mut)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding:0;list-style:none}
+.tags li{font-size:.85rem;padding:3px 11px;border-radius:99px;background:rgba(39,211,230,.1);color:var(--tile)}
+/* timeline */
+.tl{border-left:2px solid var(--line);margin-left:6px}
+.job{position:relative;padding:0 0 34px 28px}
+.job::before{content:"";position:absolute;left:-8px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--lapis)}
+.job.now::before{background:var(--tile);border-color:var(--tile);box-shadow:0 0 0 5px rgba(39,211,230,.18)}
+.job h3{font:700 1.2rem Bricolage Grotesque,sans-serif;margin:0}
+.job .m{color:var(--mut);font-size:.92rem;margin:2px 0 10px}
+.job ul{margin:0;padding-left:1.1em;max-width:44em;color:#cdd7f0}
+.job li{margin-bottom:6px}
+/* skills / pubs */
+.sk{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.sk .card{padding:24px}
+.sk h3{font-size:1.05rem;margin:0 0 6px}
+.sk .tags{margin-top:12px}
+.pubs{display:grid;gap:12px}
+.pubs a{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px;transition:border-color .2s}
+.pubs .item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 22px}
+.pubs a:hover{border-color:var(--tile)}
+.pubs small{display:block;color:var(--mut)}
+.end{text-align:center;padding:110px 0 70px}
+.end h2{font-size:clamp(2.2rem,6vw,4rem)}
+.end .cta{justify-content:center;margin-top:26px}
+footer{border-top:1px solid var(--line);color:var(--mut);text-align:center;padding:24px;font-size:.9rem}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (max-width:800px){
+  header nav{display:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .c-a,.c-b,.c-c,.c-d{grid-column:span 6}
+  .sk{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.blob{animation:drift 40s ease-in-out infinite alternate!important}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<header><div class="w"><b>Aidin Zehtab</b>
+<nav aria-label="Sections"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#papers">Papers</a><a href="#contact">Contact</a></nav></div></header>
+
+<div class="hero">
+  <div class="w"><div class="box">
+    <h1><span>Aidin</span><span>Zehtab</span></h1>
+    <p class="say"><span class="l1">AI Tech Lead.</span><span class="l2"><i>I build</i><b id="typed">LLM products</b></span></p>
+    
+    <div class="cta">
+      <a class="btn pri" href="#work">See my work</a>
+      <a class="btn sec" href="#contact">Get in touch</a>
+    </div>
+  </div></div>
+</div>
+
+<div class="w">
+  <div class="stats rv">
+    <div><strong>8+</strong><span>years shipping ML to production</span></div>
+    <div><strong>3</strong><span>published papers</span></div>
+    <div><strong>4</strong><span>industries: health, fintech, consumer, poetry</span></div>
+    <div><strong>1</strong><span>offline deployment that survived a national internet outage</span></div>
+  </div>
+
+  <section id="work">
+    <h2 class="rv">Selected work</h2>
+    <p class="sub rv">Language models and AI features for Persian speakers, built end to end.</p>
+    <div class="bento">
+      <div class="card c-a rv">
+        <h3>Persian classical poetry LLM</h3>
+        <p>Dataset design, an instruction-tuning set built to cut hallucinations, multi-stage training (continued pre-training, then SFT) on multi-GPU infrastructure, tiered cloud storage for artifacts, and an automated checkpoint evaluation framework.</p>
+        <ul class="tags"><li>Fine-tuning</li><li>Multi-GPU</li><li>Evaluation</li><li>MinIO</li></ul>
+      </div>
+      <div class="card c-b rv">
+        <h3>Zigap</h3>
+        <p>An AI assistant with real-time news search, voice-driven music streaming, and a memory module that recalls user preferences.</p>
+        <ul class="tags"><li>RAG</li><li>Voice</li><li>Memory</li></ul>
+      </div>
+      <div class="card c-c rv">
+        <h3>Prescription reader</h3>
+        <p>Multimodal models extract drug names from physician prescriptions, with fine-tuned lightweight LLMs correcting noisy spellings. Manual verification time dropped.</p>
+        <ul class="tags"><li>Multimodal</li><li>OCR</li><li>Healthcare</li></ul>
+      </div>
+      <div class="card c-d rv">
+        <h3>Banking assistant</h3>
+        <p>A context-aware LLM chatbot for Maskan Bank that answers banking questions and acts as a financial assistant.</p>
+        <ul class="tags"><li>LLM chatbot</li><li>Fintech</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2 class="rv">Experience</h2>
+    <p class="sub rv">Where the work happened.</p>
+    <div class="tl">
+      <div class="job now rv"><h3>AI Tech Lead · Persian Poetry (smilinno hub)</h3><p class="m">Apr 2026 – present · Tehran</p>
+        <ul><li>Owns the fine-tuning pipeline, dataset design and evaluation for a Persian poetry language model.</li><li>Resolved framework and infrastructure issues to reach stable multi-GPU training runs.</li></ul></div>
+      <div class="job now rv"><h3>AI Tech Lead · Zigap (smilinno hub)</h3><p class="m">Mar 2024 – present · Tehran</p>
+        <ul><li>Shipped news search, voice music search and a personalization memory module.</li><li>Ran topic modeling on user data to surface satisfaction insights.</li><li>Built a local deployment that kept service running through nationwide internet outages.</li></ul></div>
+      <div class="job rv"><h3>ML Consultant · Darmankade (part-time)</h3><p class="m">Jun 2024 – Apr 2025 · Remote</p>
+        <ul><li>Prescription digitization with multimodal models and fine-tuned LLM spelling correction.</li></ul></div>
+      <div class="job rv"><h3>AI Tech Lead · Navaco (Maskan Bank)</h3><p class="m">2024 · Tehran</p>
+        <ul><li>Designed and built an LLM banking chatbot and financial assistant.</li></ul></div>
+      <div class="job rv"><h3>ML Developer · Darmankade</h3><p class="m">Jun 2023 – Jun 2024 · Tehran</p>
+        <ul><li>Built a symptom checker and improved the doctor recommender by 20%.</li></ul></div>
+      <div class="job rv"><h3>ML Developer · Timora</h3><p class="m">Aug 2022 – Jun 2023 · Tehran</p>
+        <ul><li>Recommendation and personalization algorithms for a social media platform, a 10% overall improvement.</li></ul></div>
+      <div class="job rv"><h3>ML Developer · Freelance</h3><p class="m">Jun 2020 – Aug 2022 · Remote</p>
+        <ul><li>Fault prediction from 78% to 86%, price prediction at 88.3% F-score, credit risk at 95% F-score, multilingual NER at 84%, federated classifier from 80% to 86%.</li></ul></div>
+      <div class="job rv"><h3>NLP Developer · ComInSys Lab</h3><p class="m">Oct 2018 – Sep 2020 · Tabriz</p>
+        <ul><li>Python NLP tooling: tokenization, spell checking, NER, POS tagging, similarity analysis.</li></ul></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="rv">Skills</h2>
+    <p class="sub rv">The whole stack, from training to deployment.</p>
+    <div class="sk">
+      <div class="card rv"><h3>AI / ML</h3><ul class="tags"><li>LLMs</li><li>Fine-tuning</li><li>RAG</li><li>Reranking</li><li>Prompt engineering</li><li>Transformers</li><li>PyTorch</li><li>TensorFlow</li></ul></div>
+      <div class="card rv"><h3>Backend</h3><ul class="tags"><li>Python</li><li>FastAPI</li><li>REST</li><li>SQL</li><li>NoSQL</li><li>Git</li></ul></div>
+      <div class="card rv"><h3>Cloud and infrastructure</h3><ul class="tags"><li>Azure</li><li>AWS S3</li><li>MinIO</li><li>HuggingFace Hub</li><li>Docker</li><li>Linux</li><li>Gunicorn</li><li>Azure DevOps</li></ul></div>
+      <div class="card rv"><h3>Leadership</h3><ul class="tags"><li>Architecture</li><li>Technical decisions</li><li>Code review</li><li>Mentoring</li><li>Planning</li></ul></div>
+    </div>
+  </section>
+
+  <section id="papers">
+    <h2 class="rv">Papers</h2>
+    <p class="sub rv">Research on keyword extraction, multimodal prediction and sensor-based activity recognition.</p>
+    <div class="pubs">
+      <a class="rv" href="https://arxiv.org/abs/2104.04830" target="_blank" rel="noopener noreferrer">FRAKE: Fusional Real-time Automatic Keyword Extraction<small>arXiv, 2021</small></a>
+      <a class="rv" href="https://arxiv.org/pdf/2007.05056" target="_blank" rel="noopener noreferrer">Multimodal price prediction<small>Annals of Data Science, 2021</small></a>
+      <a class="rv" href="https://www.researchgate.net/profile/Meisam-Yadollahzadeh-Tabari/publication/369999135_Wearable_Sensor-Based_Human_Activity_Recognition_System_Employing_Bi-LSTM_Algorithm/links/644bb939809a535021363fa2/Wearable-Sensor-Based-Human-Activity-Recognition-System-Employing-Bi-LSTM-Algorithm.pdf" target="_blank" rel="noopener noreferrer">Wearable Sensor-Based Human Activity Recognition System Employing Bi-LSTM<small>The Computer Journal, 2023</small></a>
+    </div>
+  </section>
+
+  <section id="contact" class="end">
+    <h2 class="rv">Open to new projects.</h2>
+    <p class="sub rv" style="margin-inline:auto">Open to conversations about LLM products, fine-tuning, and Persian-language AI.</p>
+    <div class="cta rv">
+      <div class="btn pri">aidinzehtab[at]gmail.com</div>
+      <a class="btn sec" href="https://github.com/AidinZe" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn sec" href="https://linkedin.com/in/aidin-zehtab" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </section>
+</div>
+<footer>© 2026 Aidin Zehtab · Tehran</footer>
+
+<script>
+// Rotating phrase in the hero
+const words=["LLM products","Persian language models","banking assistants","recommender systems","things that survive outages"];
+const el=document.getElementById('typed');let w=0,c=0,del=false;
+if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=words[0]}else{
+(function tick(){
+  const t=words[w];c+=del?-1:1;el.textContent=t.slice(0,c);
+  let d=del?35:70;
+  if(!del&&c===t.length){del=true;d=1400}
+  else if(del&&c===0){del=false;w=(w+1)%words.length;d=300}
+  setTimeout(tick,d);
+})()}
+// Scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(n=>io.observe(n));
+// Cursor spotlight on cards
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('pointermove',e=>{
+  const r=c.getBoundingClientRect();c.style.setProperty('--x',e.clientX-r.left+'px');c.style.setProperty('--y',e.clientY-r.top+'px');
+}));
+</script>
+</body>
+</html>
